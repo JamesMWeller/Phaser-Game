@@ -34,7 +34,7 @@ function preload() {
     game.load.audio('backgroundMusic', 'data/backgroundMusic.mp3');
     
 	
-	game.load.image('fireball','images/gem.png');
+	game.load.image('fireball','images/fireball.png');
 }
 
 function create() {
