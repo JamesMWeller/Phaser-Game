@@ -192,6 +192,12 @@ function sendTracking(action, label, value)
         case "start":
             ga('send', 'event', 'boxGame', action);
             break;
+        case "Spider Killed":
+            ga('send', 'event', 'boxGame', action);
+            break;
+        case "Fireball Fired":
+            ga('send', 'event', 'boxGame', action);
+            break;
         default:
             ga('send', 'event', 'boxGame', action, label, value);
             break;
@@ -323,7 +329,7 @@ function fire() {
         game.physics.arcade.moveToObject(fireball, spider,  200);
 
         
-        sendTracking("Fireballs Fired", fireball);
+        sendTracking("Fireballs Fired");
     }
 }
 
@@ -356,7 +362,7 @@ function enviromentCreation() {
 function doFireballCollision() {
     spider.destroy();
     isAlive = false;
-    sendTracking("Spider Killed", spider);
+    sendTracking("Spider Killed");
 }
 
 function doDestroyProjectile(projFireball) {
