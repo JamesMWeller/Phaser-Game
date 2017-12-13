@@ -150,9 +150,6 @@ function update() {
                     case 65: //This is "A" Key pressed
                         fire();
                         break;
-                    case 83: //This is "S" key pressed
-                        console.log("S was Pressed!!");
-                        break;
                 }
             }));
         } 
@@ -323,7 +320,7 @@ function fire() {
         fireball.body.allowGravity = false;
         fireballSound.play();
 
-        fireball.reset(player.x -8, player.y- 8);
+        fireball.reset(player.x -8, player.y- 12);
 
         //game.physics.arcade.moveToXY(fireball, playerX, player.y, 200);
         game.physics.arcade.moveToObject(fireball, spider,  200);
